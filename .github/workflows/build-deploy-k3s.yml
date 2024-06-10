@@ -14,5 +14,6 @@ jobs:
       run: |
         whoami
         echo $PWD
+        cut -d: -f1 /etc/passwd
 
 
