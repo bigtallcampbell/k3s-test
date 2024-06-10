@@ -1,0 +1,19 @@
+name: Install and deploy k3s and kubectl
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install and Deploy k3s
+      run: |
+        devcontainer up --workspace-folder ${PWD}
+        sleep 10
+        kubectl get pods -A
+
+
