@@ -10,17 +10,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install and Deploy k3s
+    - name: Testing
       run: |
         whoami
         echo $PWD
-        # sudo apt install npm
-        # sudo npm cache clean -f
-        # sudo npm install -g n
-        # sudo n stable
-        # sudo npm install -g @devcontainers/cli
-        # devcontainer up --workspace-folder ${PWD}
-        # sleep 10
-        # kubectl get pods -A
 
 
