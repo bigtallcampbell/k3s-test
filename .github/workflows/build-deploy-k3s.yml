@@ -12,10 +12,13 @@ jobs:
 
     - name: Testing
       run: |
-        whoami
-        echo $PWD
-        cut -d: -f1 /etc/passwd
-        id -u
-        sudo id -u
+        sudo apt install npm
+        sudo npm cache clean -f
+        sudo npm install -g n
+        sudo n stable
+        sudo npm install -g @devcontainers/cli
+        devcontainer up --workspace-folder ${PWD}
+        sleep 10
+        kubectl get pods -A
 
 
