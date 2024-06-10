@@ -15,5 +15,7 @@ jobs:
         whoami
         echo $PWD
         cut -d: -f1 /etc/passwd
+        id -u
+        sudo id -u
 
 
