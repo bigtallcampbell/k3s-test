@@ -12,6 +12,8 @@ jobs:
 
     - name: Install and Deploy k3s
       run: |
+        whoami
+        echo $PWD
         sudo apt install npm
         sudo npm cache clean -f
         sudo npm install -g n
